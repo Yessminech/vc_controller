@@ -1,0 +1,6 @@
+W18 -> Pin numbers to read on board
+1 -> GND
+9 -> GPIO_09_3V3
+
+Remote Control: On: 3.0 to 15 VDC or open circuit -> 3V3 should be enough 
+                Off: 0 to 1.2 VDC or short circuit
