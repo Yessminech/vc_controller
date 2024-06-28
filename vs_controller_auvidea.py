@@ -21,7 +21,7 @@ def read_gpio_value(pin):
     with open(f"/sys/class/gpio/"+ gpiodir + "/value", 'r') as f:
         return f.read().strip()
 
-def perform_reboot(pin, delay):
+def perform_reboot(pin, delay_s):
     # Check if the pin is already exported
     if os.path.exists(f"/sys/class/gpio/"+ gpiodir ):
         # print("Pin is already exported. Unexporting...")
