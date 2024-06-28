@@ -35,8 +35,10 @@ def perform_reboot(pin, delay_s):
     unexport_gpio(pin) 
     print("Reboot performed successfully!")
     
-# Example usage for pin 329
-pin = 329
-delay = 1
+# Example usage for pin PCC.01 [https://docs.nvidia.com/jetson/archives/r35.3.1/DeveloperGuide/text/HR/JetsonModuleAdaptationAndBringUp/JetsonOrinNxNanoSeries.html?highlight=cvb]
+# PCC.01 should be specified under Customer usage here [https://developer.nvidia.com/downloads/jetson-orin-nx-and-orin-nano-series-pinmux-config-template]. Or by the carrierboard manufacturer.
 gpiodir= "PCC.01"
+# pin = base + CC + 01
+pin = 316 + 12 + 1
+delay = 1
 perform_reboot(pin, delay)
